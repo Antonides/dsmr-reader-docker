@@ -1,9 +1,6 @@
 FROM resin/armv7hf-debian:jessie
 LABEL maintainer="Bram van Dartel <root@rootrulez.com>"
 
-ARG TAG="v1.14.0"
-ENV DEBIAN_FRONTEND="noninteractive"
-
 RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup \
     && echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache \
     && apt-get -q update && apt-get -qy dist-upgrade \
