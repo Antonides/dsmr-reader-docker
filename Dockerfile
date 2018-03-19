@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM resin/armv7hf-debian:jessie
 LABEL maintainer="Bram van Dartel <root@rootrulez.com>"
 
 ARG TAG="v1.14.0"
